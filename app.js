@@ -29,6 +29,7 @@ async function getWeather() {
         //store data to a variable
         let results = response.data;
         //loop results to get dynamic data
+        console.log('Weather Forecast:');
         results.list.forEach((e) => {
             //use helpers for formatting
             console.log(formatDate(e.dt_txt) + ': ' + temperatureFormat(e.main.temp));
